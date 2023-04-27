@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verify Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
+	<script src="/static/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  </head>
+  <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+<body>
+    <div class="container px-4 py-5 mx-auto">
+        <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <div class="row justify-content-center px-3 mb-3">
+                                <img id="logo" src="/static/images/india-svgrepo-com.svg" alt="indian flag">
+                            </div>
+                            <h3 class="mb-5 text-center heading">Made in </h3>
+    
+                            <h6 class="msg-info">Please Verify Email</h6>
+                                <form action="{{url_for('verify_otp')}}" method="post">
+                                    {% if message is defined and message %}
+                         <div class ="alert alert alert-warning">{{message}}</div>{% endif %}
+                            <div class="form-group">
+                                <label class="form-control-label text-muted">OTP :</label>
+                                <input type="text" id="email" name="otp" placeholder="Enter otp" class="form-control" maxlength="6" required>
+                            </div>
+    
+                            
+                            <div class="row justify-content-center my-3 px-3">
+                                <button type="submit" class="btn-block btn-color">Verify Me</button>
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    </body>
+    </html>
+    
