@@ -65,7 +65,7 @@ def login():
         
         if user is None:
             return render_template('login.html', message="User doesn't Exist")
-        
+
         elif user and check_password_hash(user[4],password):
             session['id'] = user[0]
             session['firstname'] = user[1]
