@@ -12,7 +12,7 @@ A Flask web-application which controls timing and operation of traffic lights us
    ```
 4. Activate virtual environment
    ```activate
-   source ibmProj/bin/activate
+   source env/bin/activate
    ```
 5. Install required libraries
    ```install
